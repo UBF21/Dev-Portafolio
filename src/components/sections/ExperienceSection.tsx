@@ -47,7 +47,7 @@ const ExperienceSection = () => {
                   
                   <div className="lg:text-right">
                     <p className="text-muted-foreground mb-1">
-                      {formatDate(exp.startDate)} - {formatDate(exp.endDate)}
+                    {formatDate(exp.startDate)} - {formatDate(exp.endDate)}
                     </p>
                     <p className="font-medium text-primary">
                       {calculateDuration(exp.startDate, exp.endDate)}

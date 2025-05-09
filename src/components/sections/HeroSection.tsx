@@ -29,11 +29,11 @@ const HeroSection = () => {
         <div className="flex flex-col items-center text-center">
           <h1 className="animate-fade-in text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-4">
             <span className="block">Hi, I'm </span>
-            <span className="gradient-text">John Doe</span>
+            <span className="gradient-text">Felipe Montenegro</span>
           </h1>
           
           <p className="animate-fade-in animate-delay-100 text-xl md:text-2xl text-muted-foreground max-w-[700px] mb-8">
-            Full Stack Developer specializing in React, .NET, and cloud solutions.
+            Full Stack Developer specializing in React, Angular, .NET, Java and cloud solutions.
             Building beautiful, functional, and scalable applications.
           </p>
           
@@ -48,7 +48,7 @@ const HeroSection = () => {
           
           <div className="animate-fade-in animate-delay-300 flex gap-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/UBF21" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-primary/10 hover:bg-primary/20 text-primary rounded-full p-3 transition-colors"
@@ -57,7 +57,7 @@ const HeroSection = () => {
               <Github className="h-6 w-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/felipe-rafael-montenegro-morriberon-a79a341b2/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-primary/10 hover:bg-primary/20 text-primary rounded-full p-3 transition-colors"
@@ -66,7 +66,7 @@ const HeroSection = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a 
-              href="mailto:contact@example.com"
+              href="mailto:teabajo_ubf@hotmail.com"
               className="bg-primary/10 hover:bg-primary/20 text-primary rounded-full p-3 transition-colors"
               aria-label="Email"
             >

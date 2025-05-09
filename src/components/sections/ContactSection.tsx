@@ -138,7 +138,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="text-lg font-semibold">Email</h4>
                   <a href="mailto:contact@example.com" className="text-muted-foreground hover:text-foreground transition-colors">
-                    contact@example.com
+                    teabajo_ubf@hotmail.com
                   </a>
                 </div>
               </div>
@@ -150,7 +150,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="text-lg font-semibold">Phone</h4>
                   <a href="tel:+11234567890" className="text-muted-foreground hover:text-foreground transition-colors">
-                    +1 (123) 456-7890
+                    +51 991-941-252
                   </a>
                 </div>
               </div>
@@ -162,7 +162,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="text-lg font-semibold">Location</h4>
                   <p className="text-muted-foreground">
-                    San Francisco, California
+                    Lima, Perú
                   </p>
                 </div>
               </div>
@@ -172,7 +172,7 @@ const ContactSection = () => {
               <h3 className="text-2xl font-bold mb-6">Connect With Me</h3>
               <div className="flex gap-4">
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/UBF21" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-card hover:bg-muted p-3 rounded-full transition-colors"
@@ -181,7 +181,7 @@ const ContactSection = () => {
                   <Github className="h-6 w-6" />
                 </a>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/felipe-rafael-montenegro-morriberon-a79a341b2/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-card hover:bg-muted p-3 rounded-full transition-colors"
@@ -189,7 +189,7 @@ const ContactSection = () => {
                 >
                   <Linkedin className="h-6 w-6" />
                 </a>
-                <a 
+                {/* <a 
                   href="https://twitter.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -197,9 +197,9 @@ const ContactSection = () => {
                   aria-label="Twitter"
                 >
                   <Twitter className="h-6 w-6" />
-                </a>
+                </a> */}
                 <a 
-                  href="mailto:contact@example.com"
+                  href="mailto:teabajo_ubf@hotmail.com"
                   className="bg-card hover:bg-muted p-3 rounded-full transition-colors"
                   aria-label="Email"
                 >
