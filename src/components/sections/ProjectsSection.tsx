@@ -55,7 +55,6 @@ const ProjectsSection = () => {
           throw new Error('Error en la respuesta de la API');
         }
         const result: GithubResponse[] = await response.json();
-        console.log(result);
         setGithubData(result); // Asegúrate de que `result` sea del tipo DataItem[]
 
         const allTopics = result.reduce((acc: string[], project) => acc.concat(project.topics), [] as string[]);

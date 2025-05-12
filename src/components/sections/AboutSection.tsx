@@ -40,7 +40,7 @@ const AboutSection = () => {
             </div> */}
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <Card className="bg-card shadow-sm">
               <CardContent className="p-6">
                 <div className="text-4xl font-bold text-primary mb-2">{calculateTotalExperience()}+</div>
