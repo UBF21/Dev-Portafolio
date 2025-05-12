@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/components/ui/use-toast';
-import { Github, Linkedin, Mail, MapPin, Phone, Send, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -22,26 +24,46 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
+  const sendEmail = (e:FormEvent) => {
+    e.preventDefault();
+
+    emailjs
+      .send(import.meta.env.VITE_EMAIL_JS_SERVICE_ID, import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,formData, {
+        publicKey: import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setTimeout(() => {
+            toast({
+              title: "Message sent successfully!",
+              description: "Thank you for your message. I'll get back to you as soon as possible.",
+            });
+            
+            setFormData({
+              name: '',
+              email: '',
+              subject: '',
+              message: '',
+            });
+            
+            setIsSubmitting(false);
+          }, 1500);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    sendEmail(e);
+
     // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you as soon as possible.",
-      });
-      
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-      
-      setIsSubmitting(false);
-    }, 1500);
   };
   
   return (
