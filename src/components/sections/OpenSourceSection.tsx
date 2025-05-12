@@ -3,25 +3,25 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { getNpmPackages, formatDownloads } from '@/data/packages';
-import { Copy, ExternalLink, Github, Package } from 'lucide-react';
+import {formatDownloads } from '@/data/packages';
+import { Copy, Package } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { NuGetResponse } from '@/interfaces/NugetResponse';
 import { NpmResponse } from '@/interfaces/NpmResponse';
 
 const OpenSourceSection = () => {
-  const npmPackages = getNpmPackages();
+  // const npmPackages = getNpmPackages();
   // const nugetPackages = getNugetPackages();
 
   const [nugetData, setNugetData] = useState<NuGetResponse>({ data: [], totalHits: 0 });
-  const [loadingNugetData, setLoadingNugetData] = useState<boolean>(false);
-  const [errorNugetData, setErrorNugetData] = useState<string | null>(null);
+  const [, setLoadingNugetData] = useState<boolean>(false);
+  const [, setErrorNugetData] = useState<string | null>(null);
 
   const [npmData, setNpmData] = useState<NpmResponse>({ objects: [], time: "", total: 0 });
-  const [loadingNpmData, setLoadingNpmData] = useState<boolean>(false);
-  const [errorNpmData, setErrorNpmData] = useState<string | null>(null);
+  const [, setLoadingNpmData] = useState<boolean>(false);
+  const [, setErrorNpmData] = useState<string | null>(null);
 
-  const [activeTab, setActiveTab] = useState<'npm' | 'nuget'>('npm');
+  const [, setActiveTab] = useState<'npm' | 'nuget'>('npm');
 
   const copyToClipboard = (text: string, packageName: string) => {
     navigator.clipboard.writeText(text).then(() => {

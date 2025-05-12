@@ -26,7 +26,7 @@ interface NuGetPackage {
     verified: boolean;
     packageTypes: PackageType[];
     versions: PackageVersion[];
-s    vulnerabilities: any[]; // Puedes definir un tipo más específico si es necesario
+    vulnerabilities: any[]; // Puedes definir un tipo más específico si es necesario
 }
 
 export interface NuGetResponse {

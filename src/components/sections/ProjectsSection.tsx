@@ -12,8 +12,8 @@ const ProjectsSection = () => {
   // const allTags = getAllTags();
 
   const [githubData, setGithubData] = useState<GithubResponse[]>([]);
-  const [loadingNugetData, setLoadingNugetData] = useState<boolean>(false);
-  const [errorGithubData, setErrorGithubData] = useState<string | null>(null);
+  const [, setLoadingNugetData] = useState<boolean>(false);
+  const [, setErrorGithubData] = useState<string | null>(null);
 
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [visibleProjects, setVisibleProjects] = useState<GithubResponse[]>(githubData.slice(0, 3));
